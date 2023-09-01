@@ -3,14 +3,8 @@
 import styles from './card.module.scss'
 import {addItem, removeItem} from "@/redux/features/BasketSlice"
 import {useAppDispatch, useAppSelector} from "@/redux/hooks";
+import {CardProps} from "@/types/types";
 
-export interface CardProps {
-    card : {
-        id : number,
-        title : string,
-        price : number
-    }
-}
 
 export default function Card({card}: CardProps) {
 
@@ -26,7 +20,7 @@ export default function Card({card}: CardProps) {
             <h2 className={styles.title}>{card.title}</h2>
             <p className={styles.price}>Цена: {card.price}$</p>
             <button onClick={() => isExistInBasket ? dispatch(removeItem(card)) : dispatch(addItem(card))}
-                    className={isExistInBasket ? styles.cardButton_active : styles.cardButton }>
+                    className={isExistInBasket ? styles.cardButton_active : styles.cardButton}>
                 {isExistInBasket ? 'Убрать из корзины' : 'Добавить в корзину'}
             </button>
         </div>)

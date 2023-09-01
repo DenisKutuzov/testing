@@ -5,11 +5,8 @@ import Card from "@/components/Card/Card";
 import styles from './cardList.module.scss'
 import {useGetCardQuery} from "@/redux/services/cardApi";
 import {CartItemType} from "@/redux/features/types"
+import {Carts} from "@/types/types";
 
-
-interface Carts {
-    products : []
-}
 
 export default function CardList() {
 
@@ -37,18 +34,12 @@ export default function CardList() {
     }
 
 
-
-
-
-
-
-
     return <div className={styles.cardList}>
-        {filterCardList.map((item ) => (
+        {filterCardList.map((item) => (
             <div key={item.id}>
                 <Card card={item}/>
             </div>
-        ) ) }
+        ))}
 
     </div>
 }

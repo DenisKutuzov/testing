@@ -16,9 +16,9 @@ import Link from "next/link";
 
 export default function ModalPay() {
 
-    const dispatch = useAppDispatch();
+    const dispatch = useAppDispatch()
 
-    const [selectedOption, setSelectedOption] = useState<string>('dollars');
+    const [selectedOption, setSelectedOption] = useState<string>('dollars')
 
 
     const basketCardList: CartItemType[] = useAppSelector((state) => state.BasketSlice)
@@ -61,7 +61,6 @@ export default function ModalPay() {
         }
     }
 
-    console.log(selectedOption)
 
     return (
         <div className={styles.modal}>
@@ -106,7 +105,7 @@ export default function ModalPay() {
                     </Link>
                 }
 
-                    <button onClick={() => pay()} className={styles.payBtn}>Оплатить</button>
+                <button onClick={() => pay()} className={styles.payBtn}>Оплатить</button>
 
             </div>
         </div>

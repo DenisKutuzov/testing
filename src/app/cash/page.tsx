@@ -4,6 +4,10 @@ import Link from "next/link";
 import {RiArrowGoBackFill} from "react-icons/ri";
 import Exchange from "@/components/Exchange/Exchange";
 
+export const metadata = {
+    title: 'Обмен валюты',
+}
+
 export default function Basket() {
 
     return (

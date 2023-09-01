@@ -5,7 +5,7 @@ export default function SumPrice () {
 
     const basketCardList = useAppSelector((state) => state.BasketSlice)
 
-    const totalPrice = basketCardList.reduce((acc, item) => (acc + item.price), 0)
+    const totalPrice: number = basketCardList.reduce((acc, item) => (acc + item.price), 0)
 
     return (
             <p className={styles.totalPrice}>Сумма: {totalPrice}$</p>

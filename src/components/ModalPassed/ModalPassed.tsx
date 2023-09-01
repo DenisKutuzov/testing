@@ -6,7 +6,6 @@ export default function ModalPassed() {
             <div className={styles.container}>
                 <h3 className={styles.title}>Покупка прошла успешно</h3>
             </div>
-
         </div>
     )
 }

@@ -1,8 +1,7 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
 
-
-const initialState : number = 50
+const initialState: number = 50
 
 
 const PayDollarSlice = createSlice({
@@ -16,8 +15,7 @@ const PayDollarSlice = createSlice({
 })
 
 
-
-export const {changeSumDollars } = PayDollarSlice.actions
+export const {changeSumDollars} = PayDollarSlice.actions
 
 
 export default PayDollarSlice.reducer

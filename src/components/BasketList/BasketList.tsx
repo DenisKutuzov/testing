@@ -8,7 +8,7 @@ import BasketCard from "@/components/BasketCard/BasketCard";
 import SumPrice from "@/components/UI/SumPrice/SumPrice";
 import ModalPassed from "@/components/ModalPassed/ModalPassed";
 import {CartItemType} from "@/redux/features/types";
-
+import {removeAllItem} from "@/redux/features/BasketSlice"
 
 export default function BasketList() {
 
@@ -24,6 +24,7 @@ export default function BasketList() {
         <>
             {basketCardList.length > 0 ?
                 <div>
+                    <button onClick={() => dispatch(removeAllItem())} className={styles.btn}>Очистить корзину</button>
                     {basketCardList.map((element: CartItemType) => (
                         <div key={element.id}>
                             <BasketCard card={element}/>

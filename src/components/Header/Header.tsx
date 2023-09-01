@@ -8,7 +8,9 @@ export default function Header() {
     return (
         <header className={styles.wrapper}>
             <div className={styles.header}>
-                <h1 className={styles.title}>Marketplace</h1>
+                <Link href={'/'}>
+                    <h1 className={styles.title}>Marketplace</h1>
+                </Link>
                 <Link href={'/basket'}>
                     <ButtonBasket/>
                 </Link>

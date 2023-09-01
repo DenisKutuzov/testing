@@ -1,11 +1,10 @@
-import {CardProps} from "@/components/Card/Card";
 import styles from './basketCard.module.scss'
 import {RiDeleteBin6Fill} from "react-icons/ri";
-import {useDispatch} from "react-redux";
 import {removeItem} from "@/redux/features/BasketSlice"
 import {useAppDispatch} from "@/redux/hooks";
+import {CardProps} from "@/types/types";
 
-export default function BasketCard ({card} : CardProps) {
+export default function BasketCard({card}: CardProps) {
 
     const dispatch = useAppDispatch();
 

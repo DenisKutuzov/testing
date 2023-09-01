@@ -1,13 +1,13 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
-interface ModalSliceState {
+export interface ModalSliceState {
     modalPay: boolean
-    modalPassed : boolean
+    modalPassed: boolean
 }
 
 const initialState: ModalSliceState = {
-    modalPay : false,
-    modalPassed : false
+    modalPay: false,
+    modalPassed: false
 }
 
 
@@ -25,9 +25,7 @@ const ModalSlice = createSlice({
 })
 
 
-
-
-export const {modalPayToggle, modalPassedToggle } = ModalSlice.actions
+export const {modalPayToggle, modalPassedToggle} = ModalSlice.actions
 
 
 export default ModalSlice.reducer

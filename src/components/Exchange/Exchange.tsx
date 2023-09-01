@@ -6,7 +6,7 @@ import {useAppDispatch, useAppSelector} from "@/redux/hooks";
 import {changeSumCoin} from '@/redux/features/PayCoinSlice'
 import {changeSumDollars} from '@/redux/features/PayDollarSlice'
 
-export default function Exchange () {
+export default function Exchange() {
 
     const dispatch = useAppDispatch();
 
@@ -22,9 +22,10 @@ export default function Exchange () {
         if (amount < 1) {
             setDollars(1)
         } else {
-        setDollars(amount)
+            setDollars(amount)
         }
     }
+
     function handleCoinChange(e: ChangeEvent<HTMLInputElement>) {
         const amount: number = parseFloat(e.target.value);
         if (amount < 1) {
@@ -46,14 +47,16 @@ export default function Exchange () {
         <div className={styles.container}>
             <h2 className={styles.title}>Зачислить Доллары</h2>
             <div className={styles.input}>
-                <input type="number" value={dollars}  onChange={handleDollarsBuy}/>
+                <input type="number" value={dollars} onChange={handleDollarsBuy}/>
             </div>
-            <button onClick={ () => dollars > 0 && dispatch(changeSumDollars(dollars + sumDollar))} className={styles.btn}>Купить Dollars $</button>
+            <button onClick={() => dollars > 0 && dispatch(changeSumDollars(dollars + sumDollar))}
+                    className={styles.btn}>Купить Dollars $
+            </button>
             <p className={styles.title}>Обмен Dollars на COIN</p>
             <div className={styles.input}>
-            <input type="number" value={coin} onChange={handleCoinChange}/>
+                <input type="number" value={coin} onChange={handleCoinChange}/>
             </div>
-            <button onClick={ () => coin > 0 && exChange()} className={styles.btn}>Получить COIN</button>
+            <button onClick={() => coin > 0 && exChange()} className={styles.btn}>Получить COIN</button>
         </div>
     )
 }

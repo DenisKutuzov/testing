@@ -4,6 +4,10 @@ import BasketList from "@/components/BasketList/BasketList";
 import Link from "next/link";
 import {RiArrowGoBackFill} from "react-icons/ri";
 
+export const metadata = {
+    title: 'Корзина',
+}
+
 export default function Basket() {
 
     return (

@@ -1,8 +1,7 @@
 'use client'
+
 import styles from './buttonBasket.module.scss'
-
-
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
+import {useAppSelector } from "@/redux/hooks";
 import {IoIosBasket} from "react-icons/io";
 
 export default function ButtonBasket () {
