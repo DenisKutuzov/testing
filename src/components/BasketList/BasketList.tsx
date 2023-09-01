@@ -7,6 +7,7 @@ import {modalPayToggle} from "@/redux/features/ModalSlice";
 import BasketCard from "@/components/BasketCard/BasketCard";
 import SumPrice from "@/components/UI/SumPrice/SumPrice";
 import ModalPassed from "@/components/ModalPassed/ModalPassed";
+import {CartItemType} from "@/redux/features/types";
 
 
 export default function BasketList() {
@@ -23,7 +24,7 @@ export default function BasketList() {
         <>
             {basketCardList.length > 0 ?
                 <div>
-                    {basketCardList.map((element: any) => (
+                    {basketCardList.map((element: CartItemType) => (
                         <div key={element.id}>
                             <BasketCard card={element}/>
                         </div>
