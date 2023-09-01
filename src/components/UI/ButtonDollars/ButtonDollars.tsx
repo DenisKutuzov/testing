@@ -5,15 +5,15 @@ import styles from './buttonDollars.module.scss'
 import {useAppSelector} from "@/redux/hooks";
 import {PiCurrencyDollarSimpleFill} from "react-icons/pi";
 
-export default function ButtonCoin () {
+export default function ButtonDollars () {
 
-    const sumCoin = useAppSelector((state) => state.PayCoinSlice)
+    const sumDollars : number = useAppSelector((state) => state.PayDollarSlice)
 
     return (
-        <div className={styles.counterDollar }>
+        <div className={styles.buttonDollar }>
             <PiCurrencyDollarSimpleFill size={30} color={'white'} />
-            <div className={styles.counterCoin}>
-                <span>{sumCoin}</span>
+            <div className={styles.counterDollar}>
+                <span>{sumDollars}</span>
             </div>
         </div>
     )

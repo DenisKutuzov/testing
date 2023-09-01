@@ -1,0 +1,19 @@
+.wrapper {
+  position: relative;
+  max-width: 1302px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.linkBack {
+  position: absolute;
+  display: flex;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  top: -100px;
+  left: 0;
+  @media (max-width: 650px) {
+    top: -150px;
+  }
+}

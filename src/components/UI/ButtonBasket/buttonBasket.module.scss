@@ -1,0 +1,25 @@
+.buttonBasket {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.8s;
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+
+
+.counterBasket {
+ position: absolute;
+  z-index: 5;
+  top: 0;
+  left: -2px;
+  display: inline-block;
+  padding: 2px 5px;
+  justify-content: center;
+  color: white;
+  background-color: rgba(0, 125, 215, 0);
+  border: 1px solid #fff;
+  border-radius: 30%;
+}

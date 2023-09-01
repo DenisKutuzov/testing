@@ -1,0 +1,31 @@
+.basketCard {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+  border: 2px solid white;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  width: 40%;
+}
+
+.price {
+  font-size: 20px;
+}
+
+
+.btnDelete {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  justify-content: center;
+  transition: 0.3s;
+  &:hover {
+    transform: rotate(30deg)
+  }
+}
