@@ -13,4 +13,7 @@
   border: 2px solid #ffffff;
   top: -100px;
   left: 0;
+  @media (max-width: 650px) {
+    top: -150px;
+  }
 }
