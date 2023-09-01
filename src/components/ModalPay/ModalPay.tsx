@@ -9,6 +9,7 @@ import {useAppDispatch, useAppSelector} from "@/redux/hooks";
 import {modalPayToggle, modalPassedToggle} from "@/redux/features/ModalSlice";
 import {removeAllItem} from "@/redux/features/BasketSlice";
 import {changeSumCoin} from '@/redux/features/PayCoinSlice'
+import {changeSumDollars} from "@/redux/features/PayDollarSlice";
 import SumPrice from "@/components/UI/SumPrice/SumPrice";
 import {CartItemType} from "@/redux/features/types";
 import Link from "next/link";
@@ -37,7 +38,7 @@ export default function ModalPay() {
     const pay = () => {
         if (selectedOption === 'dollars') {
             if (sumDollar >= totalPrice) {
-                dispatch(changeSumCoin(sumDollar - totalPrice))
+                dispatch(changeSumDollars(sumDollar - totalPrice))
                 dispatch(removeAllItem())
                 dispatch(modalPayToggle(false))
                 dispatch(modalPassedToggle(true))
