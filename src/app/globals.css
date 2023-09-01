@@ -14,12 +14,16 @@
 
 
 body {
+    position: relative;
     background-color: #0f1014;
     color: white;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-    margin-bottom: 40px;
+    flex: 1;
+    /*margin-bottom: 40px;*/
 }
 
 a,
