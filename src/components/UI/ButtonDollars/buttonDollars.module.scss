@@ -1,0 +1,27 @@
+.buttonDollar {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.8s;
+  &:hover {
+    transform: scale(1.08);
+
+  }
+}
+
+
+.counterDollar {
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 2px 5px;
+  justify-content: center;
+  color: white;
+  background-color: rgba(0, 125, 215, 0);
+  border: 1px solid #fff;
+  border-radius: 30%;
+}
